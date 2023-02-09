@@ -1,0 +1,27 @@
+0) TestData
+{
+{'sckmnta', 'sckmnta'},
+{'Terkin', 'Terkin'}
+}
+1) Заголовок:
+ Username Notes on Leprosorium userpage [0] should contain пидор note
+  Username Notes on Leprosorium userpage [1] should contain пидор note
+
+2) Критичность:
+ TRIVIAL
+
+3) Предусловия:
+Login on leprosorium.ru
+
+4) Шаги
+ - open username page [0]
+ - open notes
+ - sort notes by time
+
+  - open username page [1]
+  - open notes
+  - sort notes by time
+
+5) Ожидаемый результат
+ [0] Note "Пидор" should be found
+ [1] Note "Пидор" should be found
