@@ -13,18 +13,13 @@ import static com.codeborne.selenide.Selenide.*;
 public class ParametrizedFagLepraTest extends TestBase {
 
 
-     @AfterAll
-     static void setDown() {
-        Configuration.holdBrowserOpen = false;
-    }
-
     @CsvSource({
             "Terkin, Terkin",
             "sckmnta, sckmnta"
 
     })
 
-    @DisplayName("Username Notes on Leprosorium userpage should contain Fag notes")
+    @DisplayName("UsernameNotesOnLeprosoriumUserpageShouldContainFagNote")
     @ParameterizedTest
     @Tags({@Tag("TRIVIAL"), @Tag("UI_TEST")})
 
