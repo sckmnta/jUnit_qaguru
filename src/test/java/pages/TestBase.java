@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestBase {
+    RegistrationPage registrationPage = new RegistrationPage();
     @BeforeAll
 
     static void beforeall() {
