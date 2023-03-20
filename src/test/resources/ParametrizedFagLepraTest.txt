@@ -4,8 +4,8 @@
 {'Terkin', 'Terkin'}
 }
 1) Заголовок:
- Username Notes on Leprosorium userpage [0] should contain пидор note
-  Username Notes on Leprosorium userpage [1] should contain пидор note
+ Username Notes on Leprosorium userpage [0] should contain autotest note
+  Username Notes on Leprosorium userpage [1] should contain autotest note
 
 2) Критичность:
  TRIVIAL
@@ -23,5 +23,5 @@ Login on leprosorium.ru
   - sort notes by time
 
 5) Ожидаемый результат
- [0] Note "Пидор" should be found
- [1] Note "Пидор" should be found
+ [0] Note "autotest" should be found
+ [1] Note "autotest" should be found
