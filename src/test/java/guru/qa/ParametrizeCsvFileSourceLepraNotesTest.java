@@ -2,22 +2,17 @@ package guru.qa;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import pages.TestBase;
 import pages.RegistrationPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class ParametrizeCsvSourceLepraNotesTest extends TestBase {
+public class ParametrizeCsvFileSourceLepraNotesTest extends TestBase {
 
 
-    @CsvSource({
-            "sckmnta, sckmnta",
-            "Terkin, Terkin"
-
-
-    })
+   @CsvFileSource(resources = "/testData.csv")
 
     @DisplayName("UsernameNotesOnLeprosoriumUserpageNotesTest")
     @ParameterizedTest
