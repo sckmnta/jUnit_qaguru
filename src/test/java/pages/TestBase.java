@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
+
     @BeforeAll
 
     static void beforeall() {
@@ -16,6 +17,7 @@ public class TestBase {
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = "https://leprosorium.ru";
+        Configuration.browser = "Firefox";
         open("/login");
         $(".b-login_navigation_auth").click();
         $("#js-auth_username").setValue("autotest");
