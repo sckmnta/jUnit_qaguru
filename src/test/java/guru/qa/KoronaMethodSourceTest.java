@@ -18,9 +18,9 @@ public class KoronaMethodSourceTest {
 
     static Stream<Arguments> localeDataProvider() {
         return Stream.of(Arguments.of(Locale.RU, List.of(
-                        "Служба помощи клиентам", "Защита от мошенничества")),
+                        "Вопросы и ответы")),
                 Arguments.of(Locale.EN, List.of(
-                        "Customer help center", "Fraud protection")));
+                        "FAQ")));
 
     }
 
@@ -34,14 +34,14 @@ public class KoronaMethodSourceTest {
     @MethodSource("localeDataProvider")
 
     @ParameterizedTest
-    void denizBankShouldHaveEnAndTrLangusges(Locale locale,
+    void koronapayShouldHaveEnAndRuLangusges(Locale locale,
                                              List<String> buttons) {
 
         open("transfers/online/");
-        $$("ul.I18nSwitch_langs__CpqDn").find((text(locale.name()))).click();
+        $$("li.I18nSwitch_item__QofMF").find((text(locale.name()))).click();
         //$("#clickable-button-locale-ru").click();
         //$("#clickable-button-locale-en").click();
-        $$("div.container SubFooter_pre-footer__IdCaG").shouldHave(CollectionCondition.texts(buttons));
+        $$("div#__next").shouldHave(CollectionCondition.texts(buttons));
 
 
     }
